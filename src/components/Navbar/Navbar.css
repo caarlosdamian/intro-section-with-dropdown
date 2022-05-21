@@ -25,11 +25,13 @@
 .navbar__logo {
     height: 26px;
     width: 84px;
+    margin-right:20px ;
 }
 
 .dropdown__container-span {
     display: flex;
     gap: 10px;
+    position: relative;
 }
 
 .navbar__span {

@@ -1,0 +1,31 @@
+.drop__container {
+  background: #ffffff;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+  border-radius: 10px;
+  position: absolute;
+  padding: 24px;
+}
+
+.drop__item-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 105px;
+  gap: 16px;
+}
+
+.drop__image {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.drop__list-item {
+  list-style: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 16px;
+  color: #686868;
+}

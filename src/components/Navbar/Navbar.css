@@ -1,0 +1,73 @@
+:root {
+    --gray: #686868;
+    --black: #151515;
+}
+
+
+
+.navbar__container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.navbar__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar__logo {
+    height: 26px;
+    width: 84px;
+}
+
+.dropdown__container-span {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar__span {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--gray);
+}
+
+.navbar__span:hover {
+    color: var(--black);
+}
+
+.navbar__span-icon {
+    color: var(--gray);
+}
+
+.navbar__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.navbar__button {
+    cursor: pointer;
+    padding: 13px;
+    border: 1.5px solid var(--gray);
+    border-radius: 14px;
+    background: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--gray);
+}
+
+.navbar__button:hover {
+    border: 1.5px solid var(--black);
+    color: var(--black);
+}

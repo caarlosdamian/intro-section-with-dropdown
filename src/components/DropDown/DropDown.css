@@ -30,7 +30,7 @@
   color: #686868;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 415px) {
   .drop__container {
     position: relative;
     box-shadow: none;

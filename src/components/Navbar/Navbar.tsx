@@ -36,7 +36,7 @@ export const Navbar = ({ setshowSidebar, showSidebar }: SimilarProps) => {
           display={dropCompany}
         />
 
-        {width > 375 &&
+        {width > 415 &&
           dropDownHeaders.map((item) => (
             <>
               <div
@@ -61,7 +61,7 @@ export const Navbar = ({ setshowSidebar, showSidebar }: SimilarProps) => {
               </div>
             </>
           ))}
-        {width > 375 &&
+        {width > 415 &&
           headers.map((item) => (
             <span key={item.id} className="navbar__span">
               {item.label}
@@ -69,8 +69,8 @@ export const Navbar = ({ setshowSidebar, showSidebar }: SimilarProps) => {
           ))}
       </div>
       <div className="navbar__right">
-        {width <= 375 && <img src={menu} alt='hambuerger' onClick={() => setshowSidebar(!showSidebar)} />}
-        {width > 375 && (
+        {width <= 415 && <img src={menu} alt='hambuerger' onClick={() => setshowSidebar(!showSidebar)} />}
+        {width > 415 && (
           <>
             <span className="navbar__span">Login</span>
             <button className="navbar__button">Register</button>

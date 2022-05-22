@@ -28,7 +28,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="home__right">
-        {width <= 375 ? (
+        {width <= 415 ? (
           <img
             src={heroMobile}
             alt="heroMobile"

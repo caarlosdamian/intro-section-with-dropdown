@@ -11,7 +11,7 @@ interface Props {
   display?:boolean
 }
 
-export const DropDown = ({ left, top, height, width, options,display }: Props) => {
+export const DropDown = ({ left, top, height, width, options=[],display }: Props) => {
 
   const Dropdowns = options[1]?.icon
     ? options?.map((option) => (

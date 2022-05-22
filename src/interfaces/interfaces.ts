@@ -23,7 +23,7 @@ export interface InitState {
 }
 
 export interface Action{
-    type:string
+    type:string|undefined
 }
 
 export interface SimilarProps {

@@ -1,4 +1,3 @@
-import React from "react";
 import { dropDownHeaders, headers } from "../../utils/data";
 import logo from "../../images/logo.svg";
 import iconArrow from "../../images/icon-arrow-down.svg";
@@ -8,13 +7,13 @@ import "./Navbar.css";
 import { DropDown } from "../DropDown/DropDown";
 import { useDropDownSow } from "../../hooks/useDropDownShow";
 import { useWindowSize } from "../../hooks/useWindoeSize";
+import { SimilarProps } from "../../interfaces/interfaces";
 
-export const Navbar = () => {
+
+export const Navbar = ({ setshowSidebar, showSidebar }: SimilarProps) => {
   const { handleClick, state } = useDropDownSow();
   const { height, width } = useWindowSize();
   const { dropCompany, dropFeatures } = state;
-  console.log(width);
-  console.log(height);
   return (
     <nav className="navbar__container">
       <div className="navbar__left">
@@ -52,8 +51,8 @@ export const Navbar = () => {
                       dropFeatures && item.id === "d1"
                         ? iconArrowUp
                         : dropCompany && item.id === "d2"
-                        ? iconArrowUp
-                        : iconArrow
+                          ? iconArrowUp
+                          : iconArrow
                     }
                     alt="iconArrow"
                     className="navbar__span-icon"
@@ -70,7 +69,7 @@ export const Navbar = () => {
           ))}
       </div>
       <div className="navbar__right">
-        {width <= 375 && <img src={menu} />}
+        {width <= 375 && <img src={menu} alt='hambuerger' onClick={() => setshowSidebar(!showSidebar)} />}
         {width > 375 && (
           <>
             <span className="navbar__span">Login</span>

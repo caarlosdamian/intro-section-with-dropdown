@@ -29,3 +29,18 @@
   margin-bottom: 16px;
   color: #686868;
 }
+
+@media (max-width: 375px) {
+  .drop__container {
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+  }
+  .drop__list{
+    padding-left: 24px;
+  }
+  .drop__list-item{
+    text-align: start;
+  }
+  
+}

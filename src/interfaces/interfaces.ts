@@ -1,3 +1,4 @@
+
 export interface Headers {
     id: string,
     label: string,
@@ -24,3 +25,8 @@ export interface InitState {
 export interface Action{
     type:string
 }
+
+export interface SimilarProps {
+    setshowSidebar:React.Dispatch<React.SetStateAction<any>>;
+    showSidebar: boolean;
+  }

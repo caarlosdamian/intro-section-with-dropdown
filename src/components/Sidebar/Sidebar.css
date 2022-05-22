@@ -1,0 +1,52 @@
+.sidebar__container{
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    transition: all 0.5s ease;
+
+    
+}
+
+.sidebar__left{
+    background: #151515;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    flex: 1.1;
+}
+
+.sidebar__right{
+    background:#fff;
+    flex: 2;
+    max-width: 240px;
+    padding-right: 19px;
+    padding-top: 22px;
+}
+
+.sidebar__right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 24px;
+}
+.sidebar__right-top{
+    align-self: flex-end;
+    margin-bottom: 31px;
+}
+
+.sidebar__right-bottom{
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar_span{
+   padding-left: 80px;
+}
+
+#sidebar_button{
+ width: 195px;
+ align-self: center;
+}

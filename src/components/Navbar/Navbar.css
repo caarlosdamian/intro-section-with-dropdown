@@ -73,3 +73,19 @@
     border: 1.5px solid var(--black);
     color: var(--black);
 }
+
+
+@media (max-width: 375px) {
+  
+
+.navbar__container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+  }
+  

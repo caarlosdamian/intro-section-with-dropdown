@@ -3,19 +3,22 @@ import { dropDownHeaders, headers } from "../../utils/data";
 import logo from "../../images/logo.svg";
 import iconArrow from "../../images/icon-arrow-down.svg";
 import iconArrowUp from "../../images/icon-arrow-up.svg";
+import menu from "../../images/icon-menu.svg";
 import "./Navbar.css";
 import { DropDown } from "../DropDown/DropDown";
 import { useDropDownSow } from "../../hooks/useDropDownShow";
+import { useWindowSize } from "../../hooks/useWindoeSize";
 
 export const Navbar = () => {
   const { handleClick, state } = useDropDownSow();
+  const { height, width } = useWindowSize();
   const { dropCompany, dropFeatures } = state;
-  const arrows = () => {
-
-  }
+  console.log(width);
+  console.log(height);
   return (
     <nav className="navbar__container">
       <div className="navbar__left">
+
         <img src={logo} alt="logo" className="navbar__logo" />
         <DropDown
           left={dropDownHeaders[0].left}
@@ -33,39 +36,47 @@ export const Navbar = () => {
           options={dropDownHeaders[1].options}
           display={dropCompany}
         />
-        {dropDownHeaders.map((item) => (
-          <>
-            <div
-              key={item.id}
-              className="dropdown__container-span"
-              onClick={() => handleClick(item.dropbox)}
-            >
-              <span className="navbar__span">{item.label}</span>
-              <span className="navbar__span">
-                <img
-                  src={
-                    dropFeatures && item.id === "d1"
-                      ? iconArrowUp
-                      : dropCompany && item.id === "d2"
+
+        {width > 375 &&
+          dropDownHeaders.map((item) => (
+            <>
+              <div
+                key={item.id}
+                className="dropdown__container-span"
+                onClick={() => handleClick(item.dropbox)}
+              >
+                <span className="navbar__span">{item.label}</span>
+                <span className="navbar__span">
+                  <img
+                    src={
+                      dropFeatures && item.id === "d1"
+                        ? iconArrowUp
+                        : dropCompany && item.id === "d2"
                         ? iconArrowUp
                         : iconArrow
-                  }
-                  alt="iconArrow"
-                  className="navbar__span-icon"
-                />
-              </span>
-            </div>
-          </>
-        ))}
-        {headers.map((item) => (
-          <span key={item.id} className="navbar__span">
-            {item.label}
-          </span>
-        ))}
+                    }
+                    alt="iconArrow"
+                    className="navbar__span-icon"
+                  />
+                </span>
+              </div>
+            </>
+          ))}
+        {width > 375 &&
+          headers.map((item) => (
+            <span key={item.id} className="navbar__span">
+              {item.label}
+            </span>
+          ))}
       </div>
       <div className="navbar__right">
-        <span className="navbar__span">Login</span>
-        <button className="navbar__button">Register</button>
+        {width <= 375 && <img src={menu} />}
+        {width > 375 && (
+          <>
+            <span className="navbar__span">Login</span>
+            <button className="navbar__button">Register</button>
+          </>
+        )}
       </div>
     </nav>
   );

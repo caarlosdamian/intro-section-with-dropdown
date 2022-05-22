@@ -3,7 +3,7 @@ import { Action, InitState } from "../interfaces/interfaces";
 
 export const useDropDownSow = () => {
     const initialState: InitState = {
-        dropFeatures: true,
+        dropFeatures: false,
         dropCompany: false
     }
 
